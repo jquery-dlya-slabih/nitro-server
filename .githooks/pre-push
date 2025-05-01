@@ -1,4 +1,4 @@
 #!/bin/sh
-pnpm dedupe --check
 pnpm prettier:check
+pnpm lint
 pnpm build

@@ -11,6 +11,7 @@
     "dev": "nitro dev",
     "build": "nitro build",
     "prod": "node .output/server/index.mjs",
+    "lint": "oxlint -c .oxlintrc.json --deny-warnings --report-unused-disable-directives",
     "prettier:write": "prettier -w .",
     "prettier:check": "prettier -c .",
     "prepare": "nitro prepare && git config --local core.hooksPath .githooks || echo 'An error occurred while installing the git hooks configuration'"
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "nitropack": "2.11.11",
+    "oxlint": "0.16.8",
     "prettier": "3.5.3"
   }
 }

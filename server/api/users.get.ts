@@ -7,6 +7,5 @@ defineRouteMeta({
 });
 
 export default defineCachedEventHandler(async () => {
-  return await $fetch('https://dummyjson.com/users')
-    .catch((error) => console.log(error));
+  return await $fetch('https://dummyjson.com/users').catch((error) => console.log(error));
 });
