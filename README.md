@@ -1,0 +1,2 @@
+# nitro-server
+Server template
