@@ -1,0 +1,23 @@
+{
+  "name": "nitro-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "22.14.0",
+    "pnpm": "10"
+  },
+  "scripts": {
+    "dev": "nitro dev",
+    "build": "nitro build",
+    "prod": "node .output/server/index.mjs",
+    "prettier:write": "prettier -w .",
+    "prettier:check": "prettier -c .",
+    "prepare": "nitro prepare && git config --local core.hooksPath .githooks || echo 'An error occurred while installing the git hooks configuration'"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "nitropack": "2.11.11",
+    "prettier": "3.5.3"
+  }
+}
