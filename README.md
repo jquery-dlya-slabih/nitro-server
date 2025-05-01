@@ -25,13 +25,13 @@ If needed, you can disable strict version checks by setting `engine-strict=false
 
 ## Commands
 
-| description                         | command                    |
-| ----------------------------------- | -------------------------- |
-| run dev build with dev server       | `pnpm dev`                 |
-| run prod build                      | `pnpm build`               |
-| run prod server (prod build needed) | `pnpm prod`                |
-| run prettier check                  | `pnpm prettier:check`      |
-| run prettier write                  | `pnpm prettier:write`      |
+| description                         | command               |
+| ----------------------------------- | --------------------- |
+| run dev build with dev server       | `pnpm dev`            |
+| run prod build                      | `pnpm build`          |
+| run prod server (prod build needed) | `pnpm prod`           |
+| run prettier check                  | `pnpm prettier:check` |
+| run prettier write                  | `pnpm prettier:write` |
 
 ## Hooks
 
