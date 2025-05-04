@@ -17,6 +17,12 @@ If needed, you can disable strict version checks by setting `engine-strict=false
 3. install deps `pnpm install`
 4. run dev `pnpm run dev`
 
+Example routes:
+
+- get all users http://localhost:3000/api/users
+- get user by id http://localhost:3000/api/users/1
+- docs http://localhost:3000/_docs
+
 ## For prod
 
 1. install deps `pnpm install`
