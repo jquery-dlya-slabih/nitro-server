@@ -1,8 +1,18 @@
 defineRouteMeta({
   openAPI: {
-    tags: ['user'],
-    description: 'User by id',
-    parameters: [{ in: 'query', name: 'user', required: true }]
+    tags: ['Users'],
+    description: 'Get user by id',
+    parameters: [
+      {
+        in: 'path',
+        name: 'id',
+        required: true,
+        schema: {
+          type: 'integer',
+          description: 'User id'
+        }
+      }
+    ]
   }
 });
 

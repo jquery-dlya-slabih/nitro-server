@@ -85,6 +85,11 @@ You can add your application specific utils inside `server/utils` directory and 
 Every export in the utils directory and its subdirectories will become available globally in your application. Check
 [documentation](https://nitro.build/guide/utils) for more.
 
+## OpenAPI
+
+To enable **OpenAPI** documentation, use `defineRouteMeta` in your API handlers. For **Swagger** or **Scalar** configuration,
+modify the `nitro.config.ts` file and read the official [documentation](https://nitro.build/config#openapi).
+
 ## Hooks
 
 There is a `pre-push` hook in the `.githooks` folder. If you want to add another hook, for example `pre-commit`, then you need:
