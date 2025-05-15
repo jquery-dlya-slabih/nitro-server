@@ -15,9 +15,9 @@
     "lint": "oxlint -c .oxlintrc.json --deny-warnings --report-unused-disable-directives",
     "prettier:write": "prettier -w .",
     "prettier:check": "prettier -c .",
-    "docker:build": "docker build -t nitro-server:22-super-slim .",
-    "docker:run": "docker run -p 3000:3000 -d --name nitro-server nitro-server:22-super-slim",
-    "docker:stop": "docker stop nitro-server:22-super-slim",
+    "docker:build": "docker build -t nitro-server:latest .",
+    "docker:run": "docker run -p 3000:3000 -d --name nitro-server nitro-server:latest",
+    "docker:stop": "docker stop nitro-server",
     "prepare": "nitro prepare && git config --local core.hooksPath .githooks || echo 'An error occurred while installing the git hooks configuration'"
   },
   "devDependencies": {

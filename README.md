@@ -25,20 +25,30 @@ Example routes:
 
 ## For prod
 
-1. install deps `pnpm install`
-2. pnpm build
-3. pnpm prod
+### With docker
+
+1. `pnpm docker:build`
+2. `pnpm docker:start`
+
+### Without docker
+
+1. `pnpm install`
+2. `pnpm build`
+3. `pnpm prod`
 
 ## Commands
 
 | description                         | command               |
-| ----------------------------------- | --------------------- |
+|-------------------------------------|-----------------------|
 | run dev build with dev server       | `pnpm dev`            |
 | run prod build                      | `pnpm build`          |
 | run prod server (prod build needed) | `pnpm prod`           |
 | run oxlint                          | `pnpm lint`           |
 | run prettier check                  | `pnpm prettier:check` |
 | run prettier write                  | `pnpm prettier:write` |
+| run docker image build              | `pnpm docker:build`   |
+| start docker container              | `pnpm docker:run`     |
+| stop docker container               | `pnpm docker:stop`    |
 
 ## API
 
@@ -109,6 +119,12 @@ If you want to delete all hooks:
 1. remove `.githooks` folder
 2. remove `prepare` command in `package.json`
 3. in project root use command `git config --unset core.hooksPath`
+
+## Docker
+
+If you encounter a **pnpm** installation error like: Known issue: `Error: Error when performing the request to
+https://registry.npmjs.org/pnpm/-/pnpm-10.7.0.tgz; for troubleshooting help,
+see https://github.com/nodejs/corepack#troubleshooting.`). Try running the `docker:build` command again.
 
 ## Contributing
 

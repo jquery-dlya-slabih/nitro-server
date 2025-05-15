@@ -1,29 +1,30 @@
-FROM node:22-slim AS build
+FROM node:22-slim AS base
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
+
 RUN corepack enable
 
+COPY . /app
 WORKDIR /app
 
-COPY . .
+FROM base AS prod-deps
 
-EXPOSE 3000
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
 
-RUN pnpm install && pnpm build
+FROM base AS build
+
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+RUN pnpm run build
 
 FROM node:22-slim
 
-RUN corepack enable
-
 WORKDIR /app
 
-ENV NODE_ENV=produdction
-
-COPY --from=build /app/package.json /app/pnpm-lock.yaml /app/
-
-RUN pnpm install --prod
-
+COPY --from=base /app/package.json /app/package.json
+COPY --from=prod-deps /app/node_modules /app/node_modules
 COPY --from=build /app/.output /app/.output
 
-CMD ["pnpm", "prod"]
+EXPOSE 8000
+
+CMD [ "npm", "run", "prod" ]
