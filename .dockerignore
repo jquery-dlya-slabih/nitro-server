@@ -1,0 +1,12 @@
+node_modules
+.nitro
+.output
+.idea
+.git
+.githooks
+.gitignore
+.oxlintrc.json
+.prettierrc
+.prettierignore
+LICENSE
+README.md
