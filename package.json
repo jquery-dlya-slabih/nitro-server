@@ -7,7 +7,7 @@
     "node": "22.14.0",
     "pnpm": "10"
   },
-  "packageManager": "pnpm@10.7.0",
+  "packageManager": "pnpm@10.11.0",
   "scripts": {
     "dev": "nitro dev",
     "build": "nitro build",

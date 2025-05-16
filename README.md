@@ -15,7 +15,7 @@ If needed, you can disable strict version checks by setting `engine-strict=false
 1. clone project `git clone https://github.com/jquery-dlya-slabih/nitro-server.git`
 2. install pnpm 10.x version `npm install -g pnpm@latest-10`
 3. install deps `pnpm install`
-4. run dev `pnpm run dev`
+4. run dev `npm run dev`
 
 Example routes:
 
@@ -27,28 +27,28 @@ Example routes:
 
 ### With docker
 
-1. `pnpm docker:build`
-2. `pnpm docker:start`
+1. `npm run docker:build`
+2. `npm run docker:start`
 
 ### Without docker
 
 1. `pnpm install`
-2. `pnpm build`
-3. `pnpm prod`
+2. `npm run build`
+3. `npm run prod`
 
 ## Commands
 
-| description                         | command               |
-|-------------------------------------|-----------------------|
-| run dev build with dev server       | `pnpm dev`            |
-| run prod build                      | `pnpm build`          |
-| run prod server (prod build needed) | `pnpm prod`           |
-| run oxlint                          | `pnpm lint`           |
-| run prettier check                  | `pnpm prettier:check` |
-| run prettier write                  | `pnpm prettier:write` |
-| run docker image build              | `pnpm docker:build`   |
-| start docker container              | `pnpm docker:run`     |
-| stop docker container               | `pnpm docker:stop`    |
+| description                         | command                  |
+|-------------------------------------|--------------------------|
+| run dev build with dev server       | `npm run dev`            |
+| run prod build                      | `npm run build`          |
+| run prod server (prod build needed) | `npm run prod`           |
+| run oxlint                          | `npm run lint`           |
+| run prettier check                  | `npm run prettier:check` |
+| run prettier write                  | `npm run prettier:write` |
+| run docker image build              | `npm run docker:build`   |
+| start docker container              | `npm run docker:run`     |
+| stop docker container               | `npm run docker:stop`    |
 
 ## API
 
