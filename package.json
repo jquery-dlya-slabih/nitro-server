@@ -1,7 +1,7 @@
 {
   "name": "nitro-server",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "engines": {
     "node": "22.14.0",
@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "nitro dev",
     "build": "nitro build",
-    "prod": "node .output/server/index.mjs",
+    "prod": "NODE_ENV=production node .output/server/index.mjs",
     "lint": "oxlint -c .oxlintrc.json --deny-warnings --report-unused-disable-directives",
     "prettier:write": "prettier -w .",
     "prettier:check": "prettier -c .",
