@@ -13,7 +13,7 @@ If needed, you can disable strict version checks by setting `engine-strict=false
 ## For dev
 
 1. clone project `git clone https://github.com/jquery-dlya-slabih/nitro-server.git`
-2. install pnpm 10.x version `npm install -g pnpm@latest-10`
+2. install pnpm 10.x version `npm install -g pnpm@10.11.0`
 3. install deps `pnpm install`
 4. run dev `npm run dev`
 
@@ -123,7 +123,7 @@ If you want to delete all hooks:
 ## Docker
 
 If you encounter a **pnpm** installation error like: Known issue: `Error: Error when performing the request to
-https://registry.npmjs.org/pnpm/-/pnpm-10.7.0.tgz; for troubleshooting help,
+https://registry.npmjs.org/pnpm/-/pnpm-10.11.0.tgz; for troubleshooting help,
 see https://github.com/nodejs/corepack#troubleshooting.`). Try running the `docker:build` command again.
 
 ## Contributing
